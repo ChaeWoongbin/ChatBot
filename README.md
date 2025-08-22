@@ -5,3 +5,6 @@
 - [ollama]
 - 터미널 : https://youtu.be/FOJf0KZjCxo
 - streamlit : https://youtu.be/DouUa4ewleQ
+
+
+- pip install ollama streamlit chromadb ymupdf4llm sentence_transformers langchain
