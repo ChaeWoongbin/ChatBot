@@ -40,7 +40,7 @@ def setup_rag_system(folder_path, collection_name):
                 try:
                     pdf_data = pymupdf4llm.to_markdown(file_path)
                     text = "".join(pdf_data)
-                    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+                    text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n","\n",".","!","?"], chunk_size=1000, chunk_overlap=150)
                     chunks = text_splitter.split_text(text)
                     all_chunks.extend(chunks)
                 except Exception as e:
